@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahim Faisal Deepto | AI Engineer & Agentic Systems Specialist</title>
+  <meta name="description" content="Technical portfolio of Fahim Faisal Deepto — AI Engineer specializing in Autonomous AI Agents, MCP Tool Connectors, Production LLM Pipelines, and Healthcare ML.">
+  <meta name="author" content="Fahim Faisal Deepto">
+  <meta property="og:title" content="Fahim Faisal Deepto | AI Engineer & Agentic Systems Specialist">
+  <meta property="og:description" content="AI Engineer experienced in Agentic Workflows, MCP Connectors, LLM Evaluation, and Applied Healthcare Analytics.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/56530414?v=4">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              teal: '#14b8a6',
+              emerald: '#10b981',
+              dark: '#080c14',
+              slate: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-teal-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2 group text-decoration-none">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-teal-500 to-cyan-500 flex items-center justify-center font-bold text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform font-mono">
+          FD
+        </span>
+        <span class="font-display font-bold text-lg tracking-tight group-hover:text-teal-400 transition-colors">
+          Fahim Faisal Deepto<span class="text-teal-400">.ai</span>
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-teal-400 transition-colors">Technical Skills</a>
+        <a href="#experience" class="hover:text-teal-400 transition-colors">Experience</a>
+        <a href="#research" class="hover:text-teal-400 transition-colors">Research & Pubs</a>
+        <a href="#education" class="hover:text-teal-400 transition-colors">Education</a>
+        <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Switcher -->
+        <button id="themeToggle" class="p-2 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 border border-slate-700/50 text-slate-300 hover:text-white transition-all" aria-label="Toggle theme">
+          <i data-lucide="moon" id="themeIcon" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Direct CV Download -->
+        <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-primary text-xs sm:text-sm py-2 px-3 sm:px-4">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>Resume (PDF)</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pt-3 pb-5 border-t border-slate-800/80 bg-slate-900/95 backdrop-blur-xl">
+      <div class="flex flex-col gap-3 text-sm font-medium">
+        <a href="#projects" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Projects</a>
+        <a href="#skills" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Technical Skills</a>
+        <a href="#experience" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Experience</a>
+        <a href="#research" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Research & Pubs</a>
+        <a href="#education" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Education</a>
+        <a href="#contact" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Left Column -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="flex items-center gap-2">
+            <span class="pulse-badge">
+              <span class="pulse-dot"></span>
+              Available for AI Engineer & Agentic AI Roles
+            </span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            Engineering <span class="text-gradient">Autonomous AI Agents</span> & Applied Intelligence.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+            I am <strong class="text-white">Fahim Faisal Deepto</strong>, an AI Engineer with an MSc in Intelligent Computing. I combine deep capability across <strong>LLM agent workflows</strong>, <strong>MCP tool connectors</strong>, and <strong>computer vision</strong> with practical product execution, data pipelines, and cross-functional leadership.
+          </p>
+
+          <!-- Core Role Highlights -->
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="tag-badge text-teal-300 border-teal-500/30 bg-teal-500/10">🤖 Agentic AI & MCP</span>
+            <span class="tag-badge text-cyan-300 border-cyan-500/30 bg-cyan-500/10">⚡ LLM Workflow Testing</span>
+            <span class="tag-badge text-emerald-300 border-emerald-500/30 bg-emerald-500/10">🏥 Healthcare ML & Pipelines</span>
+            <span class="tag-badge text-indigo-300 border-indigo-500/30 bg-indigo-500/10">👁️ Computer Vision & YOLO</span>
+            <span class="tag-badge text-amber-300 border-amber-500/30 bg-amber-500/10">🎯 AI Product Management</span>
+          </div>
+
+          <!-- Fast Hiring CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="btn-primary">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>View Technical Projects</span>
+            </a>
+            <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-secondary">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              <span>Download CV</span>
+            </a>
+            <button id="copyEmailBtn" class="btn-secondary" title="Copy email to clipboard">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex items-center gap-5 pt-3 text-slate-400">
+            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 font-mono">Profiles:</span>
+            <a href="https://github.com/ffdrko" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5 text-sm" title="GitHub Profile">
+              <i data-lucide="github" class="w-5 h-5"></i>
+              <span class="hidden sm:inline">GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors flex items-center gap-1.5 text-sm" title="LinkedIn Profile">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+              <span class="hidden sm:inline">LinkedIn</span>
+            </a>
+            <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 text-sm" title="Google Scholar Profile">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              <span class="hidden sm:inline">Scholar</span>
+            </a>
+            <a href="mailto:faisal.deepto@gmail.com" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-sm" title="Direct Email">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+              <span class="hidden sm:inline">faisal.deepto@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Profile Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="glass-panel p-6 sm:p-8 rounded-2xl w-full max-w-md relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-52 h-52 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex items-center gap-4 mb-6">
+              <div class="relative">
+                <img src="https://avatars.githubusercontent.com/u/56530414?v=4" alt="Fahim Faisal Deepto" class="w-20 h-20 rounded-2xl object-cover border-2 border-teal-500/40 shadow-lg">
+                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900"></span>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xl text-white">Fahim Faisal Deepto</h3>
+                <p class="text-xs text-teal-400 font-mono">Dhaka, Bangladesh</p>
+                <p class="text-xs text-slate-400 mt-1">Innovation Engineer @ TigerIT</p>
+              </div>
+            </div>
+
+            <!-- Highlights Box -->
+            <div class="space-y-3 border-t border-slate-800/80 pt-4 text-xs text-slate-300">
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800/40">
+                <span class="text-slate-400">Current Focus</span>
+                <span class="font-medium text-white">AI Agents, MCP, Evaluation</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800/40">
+                <span class="text-slate-400">Academic Credential</span>
+                <span class="font-medium text-white">MSc Intelligent Computing (UIU)</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5 border-b border-slate-800/40">
+                <span class="text-slate-400">Primary Codebase</span>
+                <span class="font-mono text-teal-400">Python, SQL, JavaScript</span>
+              </div>
+              <div class="flex items-center justify-between py-1.5">
+                <span class="text-slate-400">Engineering Approach</span>
+                <span class="font-medium text-white">Scrum / Data-Driven / Rigorous</span>
+              </div>
+            </div>
+
+            <!-- Quick Contact Snippet -->
+            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <span class="text-xs text-slate-400 font-mono">01534403341</span>
+              <a href="#contact" class="text-xs text-teal-400 hover:text-teal-300 font-medium flex items-center gap-1">
+                Direct Contact <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Impact Metrics Banner -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div id="metricsContainer" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Featured & Filterable Projects Section -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
+            <i data-lucide="code-2" class="w-4 h-4"></i>
+            Portfolio Case Studies
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+            Engineered Systems & Applied Research
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+            Deep dive into production AI agent harnesses, healthcare analytics pipelines, computer vision models, and full-stack platforms.
+          </p>
+        </div>
+
+        <!-- Filter Pill Tabs -->
+        <div id="filterTabs" class="flex flex-wrap gap-2">
+          <!-- Rendered by app.js -->
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Technical Skills Matrix Section -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          Competency Matrix
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Technical Skills & Tooling
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Spanning modern autonomous agent frameworks, computer vision, data pipelines, and agile delivery.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Agentic AI Card -->
+        <div class="glass-panel p-6 rounded-xl flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center">
+              <i data-lucide="bot" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Agentic AI & LLMs</h3>
+              <span class="text-xs text-teal-400 font-mono">Workflow & Connectors</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsAgentic">
+            <!-- Rendered by app.js -->
+          </ul>
+        </div>
+
+        <!-- ML & Vision Card -->
+        <div class="glass-panel p-6 rounded-xl flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Vision & ML</h3>
+              <span class="text-xs text-cyan-400 font-mono">Models & Inference</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsML">
+            <!-- Rendered by app.js -->
+          </ul>
+        </div>
+
+        <!-- Data & Engineering Card -->
+        <div class="glass-panel p-6 rounded-xl flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">Data & Pipelines</h3>
+              <span class="text-xs text-emerald-400 font-mono">Analytics & ETL</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsData">
+            <!-- Rendered by app.js -->
+          </ul>
+        </div>
+
+        <!-- Product & Delivery Card -->
+        <div class="glass-panel p-6 rounded-xl flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center">
+              <i data-lucide="target" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-white text-base">AI Product & Delivery</h3>
+              <span class="text-xs text-purple-400 font-mono">Scrum & Feasibility</span>
+            </div>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsProduct">
+            <!-- Rendered by app.js -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Timeline -->
+    <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+            Track Record
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+            Professional Experience
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Translating open-ended domain problems into verified, testable AI solutions.
+          </p>
+        </div>
+      </div>
+
+      <div class="space-y-8" id="experienceList">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Research, Publications & Recognition -->
+    <section id="research" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            Peer-Reviewed Publications & Honors
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+            Research & Academic Contributions
+          </h2>
+        </div>
+
+        <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs sm:text-sm">
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+          <span>View Google Scholar Profile</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="publicationsList">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Education & Leadership Section -->
+    <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Education Column -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
+            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+            Academic Background
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-6">
+            Degrees & Graduate Thesis
+          </h2>
+
+          <div class="space-y-6" id="educationList">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+
+        <!-- Leadership Column -->
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
+            <i data-lucide="award" class="w-4 h-4"></i>
+            Community & Leadership
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-6">
+            Executive Leadership
+          </h2>
+
+          <div class="space-y-4" id="leadershipList">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Fast-Track Hiring Section -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
+      <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden text-center max-w-4xl mx-auto">
+        <div class="absolute -top-32 -left-32 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <span class="pulse-badge mb-4">
+          <span class="pulse-dot"></span>
+          Ready for New Challenges
+        </span>
+
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          Let’s Build High-Impact AI Systems Together
+        </h2>
+
+        <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8">
+          Whether you are looking for an <strong>AI Engineer</strong> to ship autonomous agent workflows, an <strong>Applied AI Researcher</strong> for complex data pipelines, or an <strong>AI Product Manager</strong> to lead technical feasibility, I would love to connect.
+        </p>
+
+        <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
+          <a href="mailto:faisal.deepto@gmail.com" class="btn-primary">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>faisal.deepto@gmail.com</span>
+          </a>
+          <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+            <span>Connect on LinkedIn</span>
+          </a>
+          <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-secondary">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Download CV (PDF)</span>
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800/80 flex flex-wrap justify-center items-center gap-8 text-xs font-mono text-slate-400">
+          <div class="flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-teal-400"></i>
+            <span>Dhaka, Bangladesh</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-teal-400"></i>
+            <span>+880 1534403341</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-teal-400"></i>
+            <span>Fast Response Time (Within 24 Hours)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Technical Architecture Modal -->
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-content p-6 sm:p-8 relative">
+      <button id="modalCloseBtn" class="absolute top-5 right-5 p-2 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-400 hover:text-white transition-all" aria-label="Close dialog">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="modalBody">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast">Email copied to clipboard!</div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Fahim Faisal Deepto. Built for Technical Hiring Managers.</p>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="https://github.com/ffdrko" target="_blank" class="hover:text-teal-400">GitHub (@ffdrko)</a>
+        <span>•</span>
+        <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" class="hover:text-teal-400">LinkedIn</a>
+        <span>•</span>
+        <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" class="hover:text-teal-400">Google Scholar</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
