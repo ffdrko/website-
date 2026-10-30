@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fahim Faisal Deepto | AI Engineer & Agentic Systems Specialist</title>
-  <meta name="description" content="Technical portfolio of Fahim Faisal Deepto — AI Engineer specializing in Autonomous AI Agents, MCP Tool Connectors, Production LLM Pipelines, and Healthcare ML.">
+  <title>Fahim Faisal Deepto — AI Engineer | Applied & Agentic AI</title>
+  <meta name="description" content="Portfolio of Fahim Faisal Deepto: AI Engineer, Agentic AI Specialist, and AI Product Manager. Case studies across LLM agent workflows, healthcare data pipelines, computer vision, and interactive Q&A.">
   <meta name="author" content="Fahim Faisal Deepto">
-  <meta property="og:title" content="Fahim Faisal Deepto | AI Engineer & Agentic Systems Specialist">
-  <meta property="og:description" content="AI Engineer experienced in Agentic Workflows, MCP Connectors, LLM Evaluation, and Applied Healthcare Analytics.">
+  <meta property="og:title" content="Fahim Faisal Deepto — AI Engineer | Applied & Agentic AI">
+  <meta property="og:description" content="AI Engineer specializing in Autonomous AI Agents, MCP Connectors, Production LLM Pipelines, and Healthcare ML.">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/56530414?v=4">
   <meta property="og:type" content="website">
 
@@ -19,12 +19,10 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              cyan: '#06b6d4',
-              teal: '#14b8a6',
-              emerald: '#10b981',
-              dark: '#080c14',
-              slate: '#0f172a'
+            teal: {
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488'
             }
           }
         }
@@ -35,462 +33,415 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom CSS -->
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased selection:bg-teal-500 selection:text-white">
+<body class="antialiased selection:bg-teal-500 selection:text-black">
 
-  <!-- Navigation Bar -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/60 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2 group text-decoration-none">
-        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-teal-500 to-cyan-500 flex items-center justify-center font-bold text-white shadow-md shadow-teal-500/20 group-hover:scale-105 transition-transform font-mono">
-          FD
-        </span>
-        <span class="font-display font-bold text-lg tracking-tight group-hover:text-teal-400 transition-colors">
-          Fahim Faisal Deepto<span class="text-teal-400">.ai</span>
-        </span>
-      </a>
+  <!-- Floating Island Dock Navigation (poulo.site style) -->
+  <header class="pointer-events-none fixed inset-x-0 top-5 z-50 flex justify-center px-3 sm:px-6">
+    <div class="pointer-events-auto relative flex max-w-full items-center gap-2">
+      <nav aria-label="Primary" class="dock-nav flex items-center p-1.5 gap-1 text-xs sm:text-sm">
+        <a href="#home" class="dock-item active" data-nav="home">Home</a>
+        <a href="#work" class="dock-item" data-nav="work">Works</a>
+        <a href="#experiments" class="dock-item hidden sm:inline-flex" data-nav="experiments">Experiments</a>
+        <a href="#stack" class="dock-item hidden md:inline-flex" data-nav="stack">Stack</a>
+        <a href="#about" class="dock-item hidden sm:inline-flex" data-nav="about">About</a>
+        <a href="#ask" class="dock-item flex items-center gap-1.5 text-teal-400 font-medium" data-nav="ask">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Ask AI</span>
+        </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
-        <a href="#skills" class="hover:text-teal-400 transition-colors">Technical Skills</a>
-        <a href="#experience" class="hover:text-teal-400 transition-colors">Experience</a>
-        <a href="#research" class="hover:text-teal-400 transition-colors">Research & Pubs</a>
-        <a href="#education" class="hover:text-teal-400 transition-colors">Education</a>
-        <a href="#contact" class="hover:text-teal-400 transition-colors">Contact</a>
-      </nav>
+        <!-- Divider -->
+        <span class="w-px h-4 bg-white/10 mx-1"></span>
 
-      <!-- Right Action Items -->
-      <div class="flex items-center gap-3">
-        <!-- Theme Switcher -->
-        <button id="themeToggle" class="p-2 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 border border-slate-700/50 text-slate-300 hover:text-white transition-all" aria-label="Toggle theme">
+        <!-- Agent View Button (poulo.site signature) -->
+        <button id="openAgentViewBtn" class="dock-item flex items-center gap-1.5 font-mono text-[11px]" title="View page as plain Markdown for AI agents">
+          <i data-lucide="bot" class="w-3.5 h-3.5 text-teal-400"></i>
+          <span class="hidden lg:inline">Agent view</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="dock-item p-1.5 rounded-full" aria-label="Toggle theme">
           <i data-lucide="moon" id="themeIcon" class="w-4 h-4"></i>
         </button>
 
-        <!-- Direct CV Download -->
-        <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-primary text-xs sm:text-sm py-2 px-3 sm:px-4">
-          <i data-lucide="download" class="w-4 h-4"></i>
-          <span>Resume (PDF)</span>
+        <!-- Download CV Button -->
+        <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-solid text-xs py-1.5 px-3 hidden md:inline-flex" title="Download verified CV PDF">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
         </a>
-
-        <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-800/60 text-slate-300 hover:text-white">
-          <i data-lucide="menu" class="w-5 h-5"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden px-4 pt-3 pb-5 border-t border-slate-800/80 bg-slate-900/95 backdrop-blur-xl">
-      <div class="flex flex-col gap-3 text-sm font-medium">
-        <a href="#projects" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Projects</a>
-        <a href="#skills" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Technical Skills</a>
-        <a href="#experience" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Experience</a>
-        <a href="#research" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Research & Pubs</a>
-        <a href="#education" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Education</a>
-        <a href="#contact" class="mobile-nav-link py-2 text-slate-300 hover:text-teal-400">Contact</a>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <main class="pt-24">
-    <!-- Hero Section -->
-    <section id="hero" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <!-- Hero Left Column -->
-        <div class="lg:col-span-7 flex flex-col gap-6">
-          <div class="flex items-center gap-2">
+  <main class="w-full">
+    <!-- 1. Hero Section (poulo.site 3-column layout) -->
+    <section id="home" class="mx-auto grid min-h-screen w-full max-w-7xl items-center gap-10 px-6 pb-16 pt-32 md:px-10 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-14">
+      
+      <!-- Left Column: Interactive Story Accordions -->
+      <div class="flex flex-col gap-3.5 order-2 lg:order-1">
+        <div class="story-card open" data-story="1">
+          <div class="story-header">
+            <span>Hi, I'm Fahim</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-teal-400 transition-transform"></i>
+          </div>
+          <div class="story-content">
+            AI Engineer with a Computer Science background and an MSc in Intelligent Computing. Translating open-ended domain problems and market needs into implementable, testable AI opportunities.
+          </div>
+        </div>
+
+        <div class="story-card" data-story="2">
+          <div class="story-header">
+            <span>I build autonomous agent workflows</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-teal-400 transition-transform"></i>
+          </div>
+          <div class="story-content">
+            Specialized in AI-agent testing, harness evaluation, tool invocation accuracy, and Model Context Protocol (MCP) integrations across GitHub, Notion, Linear, Slack, Sentry, and Google Workspace.
+          </div>
+        </div>
+
+        <div class="story-card" data-story="3">
+          <div class="story-header">
+            <span>Applied ML & Healthcare Analytics</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-teal-400 transition-transform"></i>
+          </div>
+          <div class="story-content">
+            Built 6-stage longitudinal Python pipelines processing 9 clinical datasets for the SuSastho telemedicine platform. Co-authored clinical triage research published in IEEE ICDMW 2025.
+          </div>
+        </div>
+
+        <div class="story-card" data-story="4">
+          <div class="story-header">
+            <span>Computer Vision & Real-Time Detection</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-teal-400 transition-transform"></i>
+          </div>
+          <div class="story-content">
+            Developed real-time collision detection systems utilizing YOLO and ensemble deep learning across multi-modal video feeds, achieving 90% accuracy (3rd Place - NSU ACM Challenge).
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Column: Profile Card -->
+      <div class="flex justify-center order-1 lg:order-2">
+        <div class="poulo-card p-6 sm:p-8 flex flex-col items-center text-center max-w-sm w-full relative">
+          <div class="relative mb-5">
+            <img src="https://avatars.githubusercontent.com/u/56530414?v=4" alt="Fahim Faisal Deepto" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-teal-500/50 shadow-2xl">
+            <span class="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900" title="Online and available"></span>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl text-white">Fahim Faisal Deepto</h2>
+          <p class="text-xs font-mono text-teal-400 mt-1">Innovation Engineer @ TigerIT</p>
+          <p class="text-xs text-slate-400 mt-0.5">Dhaka, Bangladesh</p>
+
+          <div class="mt-4 mb-6">
             <span class="pulse-badge">
               <span class="pulse-dot"></span>
-              Available for AI Engineer & Agentic AI Roles
+              Available for AI Roles
             </span>
           </div>
 
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
-            Engineering <span class="text-gradient">Autonomous AI Agents</span> & Applied Intelligence.
-          </h1>
-
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
-            I am <strong class="text-white">Fahim Faisal Deepto</strong>, an AI Engineer with an MSc in Intelligent Computing. I combine deep capability across <strong>LLM agent workflows</strong>, <strong>MCP tool connectors</strong>, and <strong>computer vision</strong> with practical product execution, data pipelines, and cross-functional leadership.
-          </p>
-
-          <!-- Core Role Highlights -->
-          <div class="flex flex-wrap gap-2 text-xs font-mono">
-            <span class="tag-badge text-teal-300 border-teal-500/30 bg-teal-500/10">🤖 Agentic AI & MCP</span>
-            <span class="tag-badge text-cyan-300 border-cyan-500/30 bg-cyan-500/10">⚡ LLM Workflow Testing</span>
-            <span class="tag-badge text-emerald-300 border-emerald-500/30 bg-emerald-500/10">🏥 Healthcare ML & Pipelines</span>
-            <span class="tag-badge text-indigo-300 border-indigo-500/30 bg-indigo-500/10">👁️ Computer Vision & YOLO</span>
-            <span class="tag-badge text-amber-300 border-amber-500/30 bg-amber-500/10">🎯 AI Product Management</span>
-          </div>
-
-          <!-- Fast Hiring CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#projects" class="btn-primary">
-              <i data-lucide="layers" class="w-4 h-4"></i>
-              <span>View Technical Projects</span>
+          <div class="flex items-center gap-3 w-full">
+            <a href="#work" class="btn-solid flex-1 text-xs py-2.5">
+              <span>See my work</span>
+              <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
             </a>
-            <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-secondary">
-              <i data-lucide="file-text" class="w-4 h-4"></i>
+            <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-ghost flex-1 text-xs py-2.5">
+              <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
               <span>Download CV</span>
             </a>
-            <button id="copyEmailBtn" class="btn-secondary" title="Copy email to clipboard">
-              <i data-lucide="copy" class="w-4 h-4"></i>
-              <span>Copy Email</span>
-            </button>
           </div>
 
-          <!-- Social Links -->
-          <div class="flex items-center gap-5 pt-3 text-slate-400">
-            <span class="text-xs uppercase tracking-wider font-semibold text-slate-500 font-mono">Profiles:</span>
-            <a href="https://github.com/ffdrko" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5 text-sm" title="GitHub Profile">
-              <i data-lucide="github" class="w-5 h-5"></i>
-              <span class="hidden sm:inline">GitHub</span>
+          <!-- Quick Social Icons -->
+          <div class="flex items-center justify-center gap-4 mt-6 pt-5 border-t border-white/10 w-full text-slate-400">
+            <a href="https://github.com/ffdrko" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="GitHub">
+              <i data-lucide="github" class="w-4 h-4"></i>
             </a>
-            <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors flex items-center gap-1.5 text-sm" title="LinkedIn Profile">
-              <i data-lucide="linkedin" class="w-5 h-5"></i>
-              <span class="hidden sm:inline">LinkedIn</span>
+            <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" rel="noopener noreferrer" class="hover:text-teal-400 transition-colors" title="LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
             </a>
-            <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 text-sm" title="Google Scholar Profile">
-              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-              <span class="hidden sm:inline">Scholar</span>
+            <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors" title="Google Scholar">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
             </a>
-            <a href="mailto:faisal.deepto@gmail.com" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-sm" title="Direct Email">
-              <i data-lucide="mail" class="w-5 h-5"></i>
-              <span class="hidden sm:inline">faisal.deepto@gmail.com</span>
+            <a href="mailto:faisal.deepto@gmail.com" class="hover:text-emerald-400 transition-colors" title="Email">
+              <i data-lucide="mail" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Hero Right Column: Profile Card -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="glass-panel p-6 sm:p-8 rounded-2xl w-full max-w-md relative overflow-hidden">
-            <div class="absolute -top-24 -right-24 w-52 h-52 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-            
-            <div class="flex items-center gap-4 mb-6">
-              <div class="relative">
-                <img src="https://avatars.githubusercontent.com/u/56530414?v=4" alt="Fahim Faisal Deepto" class="w-20 h-20 rounded-2xl object-cover border-2 border-teal-500/40 shadow-lg">
-                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900"></span>
-              </div>
-              <div>
-                <h3 class="font-display font-bold text-xl text-white">Fahim Faisal Deepto</h3>
-                <p class="text-xs text-teal-400 font-mono">Dhaka, Bangladesh</p>
-                <p class="text-xs text-slate-400 mt-1">Innovation Engineer @ TigerIT</p>
-              </div>
-            </div>
-
-            <!-- Highlights Box -->
-            <div class="space-y-3 border-t border-slate-800/80 pt-4 text-xs text-slate-300">
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-800/40">
-                <span class="text-slate-400">Current Focus</span>
-                <span class="font-medium text-white">AI Agents, MCP, Evaluation</span>
-              </div>
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-800/40">
-                <span class="text-slate-400">Academic Credential</span>
-                <span class="font-medium text-white">MSc Intelligent Computing (UIU)</span>
-              </div>
-              <div class="flex items-center justify-between py-1.5 border-b border-slate-800/40">
-                <span class="text-slate-400">Primary Codebase</span>
-                <span class="font-mono text-teal-400">Python, SQL, JavaScript</span>
-              </div>
-              <div class="flex items-center justify-between py-1.5">
-                <span class="text-slate-400">Engineering Approach</span>
-                <span class="font-medium text-white">Scrum / Data-Driven / Rigorous</span>
-              </div>
-            </div>
-
-            <!-- Quick Contact Snippet -->
-            <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
-              <span class="text-xs text-slate-400 font-mono">01534403341</span>
-              <a href="#contact" class="text-xs text-teal-400 hover:text-teal-300 font-medium flex items-center gap-1">
-                Direct Contact <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-              </a>
-            </div>
+      <!-- Right Column: Kinetic Vertical Ticker -->
+      <div class="flex flex-col justify-center order-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-slate-500 mb-2 font-semibold">Specialization</span>
+        <div class="ticker-viewport mb-4">
+          <div class="ticker-track text-white">
+            <div class="ticker-item text-teal-400 font-display">Technical AI Engineer</div>
+            <div class="ticker-item text-cyan-400 font-display">Agentic AI Specialist</div>
+            <div class="ticker-item text-emerald-400 font-display">AI Product Manager</div>
+            <div class="ticker-item text-indigo-400 font-display">Computer Vision & ML</div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Key Impact Metrics Banner -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div id="metricsContainer" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Rendered by app.js -->
-      </div>
-    </section>
+        <p class="text-sm text-slate-300 leading-relaxed max-w-sm mb-6">
+          Shipping intelligent products from user discovery and problem formulation to verified code, agent harnesses, and production evaluation.
+        </p>
 
-    <!-- Featured & Filterable Projects Section -->
-    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <!-- Fast Contact Button -->
         <div>
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
-            <i data-lucide="code-2" class="w-4 h-4"></i>
-            Portfolio Case Studies
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
-            Engineered Systems & Applied Research
-          </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
-            Deep dive into production AI agent harnesses, healthcare analytics pipelines, computer vision models, and full-stack platforms.
+          <button id="quickCopyEmail" class="btn-ghost text-xs py-2 px-4 flex items-center gap-2">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span>Copy faisal.deepto@gmail.com</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Initiatives & Credibility Bar (poulo.site style) -->
+    <section class="max-w-7xl mx-auto px-6 md:px-10 py-10">
+      <div class="hairline-divider mb-10">
+        <span class="hairline-node left-10"></span>
+        <span class="hairline-node right-10"></span>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <span class="text-xs font-mono uppercase tracking-wider text-slate-500 font-medium">
+          Led impactful initiatives & research at
+        </span>
+
+        <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm font-display font-bold text-slate-400">
+          <span class="hover:text-white transition-colors">TigerIT Bangladesh</span>
+          <span class="text-slate-600">•</span>
+          <span class="hover:text-white transition-colors">IRIIC (UIU)</span>
+          <span class="text-slate-600">•</span>
+          <span class="hover:text-white transition-colors">Inneed Cloud</span>
+          <span class="text-slate-600">•</span>
+          <span class="hover:text-white transition-colors">North South University</span>
+          <span class="text-slate-600">•</span>
+          <span class="text-teal-400">IEEE ICDMW 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Works Section (Case Studies with Filters) -->
+    <section id="work" class="max-w-7xl mx-auto px-6 md:px-10 py-20">
+      <div class="hairline-divider mb-12">
+        <span class="hairline-node left-12"></span>
+        <span class="hairline-node right-12"></span>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight">Works.</h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-lg">
+            Engineering autonomous agent systems, longitudinal analytics pipelines, and production computer vision models.
           </p>
         </div>
 
-        <!-- Filter Pill Tabs -->
-        <div id="filterTabs" class="flex flex-wrap gap-2">
+        <!-- Filter Pills -->
+        <div id="workFilters" class="flex flex-wrap gap-2">
           <!-- Rendered by app.js -->
         </div>
       </div>
 
-      <!-- Projects Grid -->
-      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Works Cards Grid -->
+      <div id="worksGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Rendered by app.js -->
       </div>
     </section>
 
-    <!-- Technical Skills Matrix Section -->
-    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
-          <i data-lucide="cpu" class="w-4 h-4"></i>
-          Competency Matrix
-        </div>
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
-          Technical Skills & Tooling
-        </h2>
-        <p class="text-slate-400 text-sm sm:text-base mt-2">
-          Spanning modern autonomous agent frameworks, computer vision, data pipelines, and agile delivery.
-        </p>
+    <!-- 4. AI Experiments Section (Laboratory Showcase) -->
+    <section id="experiments" class="max-w-7xl mx-auto px-6 md:px-10 py-20">
+      <div class="hairline-divider mb-12">
+        <span class="hairline-node left-12"></span>
+        <span class="hairline-node right-12"></span>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Agentic AI Card -->
-        <div class="glass-panel p-6 rounded-xl flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center">
-              <i data-lucide="bot" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-white text-base">Agentic AI & LLMs</h3>
-              <span class="text-xs text-teal-400 font-mono">Workflow & Connectors</span>
-            </div>
-          </div>
-          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsAgentic">
-            <!-- Rendered by app.js -->
-          </ul>
-        </div>
-
-        <!-- ML & Vision Card -->
-        <div class="glass-panel p-6 rounded-xl flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
-              <i data-lucide="eye" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-white text-base">Vision & ML</h3>
-              <span class="text-xs text-cyan-400 font-mono">Models & Inference</span>
-            </div>
-          </div>
-          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsML">
-            <!-- Rendered by app.js -->
-          </ul>
-        </div>
-
-        <!-- Data & Engineering Card -->
-        <div class="glass-panel p-6 rounded-xl flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
-              <i data-lucide="database" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-white text-base">Data & Pipelines</h3>
-              <span class="text-xs text-emerald-400 font-mono">Analytics & ETL</span>
-            </div>
-          </div>
-          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsData">
-            <!-- Rendered by app.js -->
-          </ul>
-        </div>
-
-        <!-- Product & Delivery Card -->
-        <div class="glass-panel p-6 rounded-xl flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center">
-              <i data-lucide="target" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="font-display font-bold text-white text-base">AI Product & Delivery</h3>
-              <span class="text-xs text-purple-400 font-mono">Scrum & Feasibility</span>
-            </div>
-          </div>
-          <ul class="space-y-2.5 text-xs text-slate-300 flex-1" id="skillsProduct">
-            <!-- Rendered by app.js -->
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Professional Experience Timeline -->
-    <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
         <div>
           <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
-            <i data-lucide="briefcase" class="w-4 h-4"></i>
-            Track Record
+            <i data-lucide="flask-conical" class="w-4 h-4"></i>
+            Laboratory & Codebases
           </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
-            Professional Experience
-          </h2>
-          <p class="text-slate-400 text-sm sm:text-base mt-2">
-            Translating open-ended domain problems into verified, testable AI solutions.
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">AI Experiments</h2>
+          <p class="text-sm text-slate-400 mt-1 max-w-lg">
+            Hands-on prototypes, evaluation test-beds, and open-source models on GitHub.
           </p>
         </div>
-      </div>
 
-      <div class="space-y-8" id="experienceList">
-        <!-- Rendered by app.js -->
-      </div>
-    </section>
-
-    <!-- Research, Publications & Recognition -->
-    <section id="research" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-        <div>
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
-            <i data-lucide="book-open" class="w-4 h-4"></i>
-            Peer-Reviewed Publications & Honors
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
-            Research & Academic Contributions
-          </h2>
-        </div>
-
-        <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs sm:text-sm">
-          <i data-lucide="external-link" class="w-4 h-4"></i>
-          <span>View Google Scholar Profile</span>
+        <a href="https://github.com/ffdrko?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn-ghost text-xs">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>View all 62 Repositories</span>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="publicationsList">
+      <!-- Experiments Grid -->
+      <div id="experimentsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Rendered by app.js -->
       </div>
     </section>
 
-    <!-- Education & Leadership Section -->
-    <section id="education" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
+    <!-- 5. Technical Stack Section -->
+    <section id="stack" class="max-w-7xl mx-auto px-6 md:px-10 py-20">
+      <div class="hairline-divider mb-12">
+        <span class="hairline-node left-12"></span>
+        <span class="hairline-node right-12"></span>
+      </div>
+
+      <div class="mb-10">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Technical Stack</h2>
+        <p class="text-sm text-slate-400 mt-1">Tools, frameworks, and engineering methodologies in my workflow.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="stackGrid">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- 6. About & Career Section -->
+    <section id="about" class="max-w-7xl mx-auto px-6 md:px-10 py-20">
+      <div class="hairline-divider mb-12">
+        <span class="hairline-node left-12"></span>
+        <span class="hairline-node right-12"></span>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <!-- Education Column -->
-        <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
-            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
-            Academic Background
-          </div>
-          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-6">
-            Degrees & Graduate Thesis
-          </h2>
-
-          <div class="space-y-6" id="educationList">
+        <!-- Experience Timeline -->
+        <div class="lg:col-span-7 space-y-6">
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-6">Experience</h2>
+          <div class="space-y-6" id="aboutExperience">
             <!-- Rendered by app.js -->
           </div>
         </div>
 
-        <!-- Leadership Column -->
-        <div class="lg:col-span-5">
-          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-teal-400 font-semibold mb-2">
-            <i data-lucide="award" class="w-4 h-4"></i>
-            Community & Leadership
+        <!-- Education & Leadership -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-6">Education</h2>
+            <div class="space-y-4" id="aboutEducation">
+              <!-- Rendered by app.js -->
+            </div>
           </div>
-          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-6">
-            Executive Leadership
-          </h2>
 
-          <div class="space-y-4" id="leadershipList">
-            <!-- Rendered by app.js -->
+          <div>
+            <h3 class="font-display font-bold text-lg text-white mb-4">Leadership</h3>
+            <div class="space-y-4" id="aboutLeadership">
+              <!-- Rendered by app.js -->
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact & Fast-Track Hiring Section -->
-    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/80">
-      <div class="glass-panel p-8 sm:p-12 rounded-3xl relative overflow-hidden text-center max-w-4xl mx-auto">
-        <div class="absolute -top-32 -left-32 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- 7. Ask me anything... Section (Signature Interactive AI Assistant) -->
+    <section id="ask" class="max-w-7xl mx-auto px-6 md:px-10 py-20">
+      <div class="hairline-divider mb-12">
+        <span class="hairline-node left-12"></span>
+        <span class="hairline-node right-12"></span>
+      </div>
 
-        <span class="pulse-badge mb-4">
-          <span class="pulse-dot"></span>
-          Ready for New Challenges
-        </span>
-
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
-          Let’s Build High-Impact AI Systems Together
-        </h2>
-
-        <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8">
-          Whether you are looking for an <strong>AI Engineer</strong> to ship autonomous agent workflows, an <strong>Applied AI Researcher</strong> for complex data pipelines, or an <strong>AI Product Manager</strong> to lead technical feasibility, I would love to connect.
-        </p>
-
-        <div class="flex flex-wrap justify-center items-center gap-4 mb-8">
-          <a href="mailto:faisal.deepto@gmail.com" class="btn-primary">
-            <i data-lucide="mail" class="w-4 h-4"></i>
-            <span>faisal.deepto@gmail.com</span>
-          </a>
-          <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-            <i data-lucide="linkedin" class="w-4 h-4"></i>
-            <span>Connect on LinkedIn</span>
-          </a>
-          <a href="assets/Fahim_Faisal_Deepto_CV.pdf" download="Fahim_Faisal_Deepto_CV.pdf" class="btn-secondary">
-            <i data-lucide="download" class="w-4 h-4"></i>
-            <span>Download CV (PDF)</span>
-          </a>
+      <div class="poulo-card p-6 sm:p-10 max-w-3xl mx-auto relative overflow-hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Ask me anything...</h2>
+            <p class="text-xs text-slate-400">Ask any question about Fahim's experience, research, or tech stack.</p>
+          </div>
         </div>
 
-        <div class="pt-6 border-t border-slate-800/80 flex flex-wrap justify-center items-center gap-8 text-xs font-mono text-slate-400">
-          <div class="flex items-center gap-2">
-            <i data-lucide="map-pin" class="w-4 h-4 text-teal-400"></i>
-            <span>Dhaka, Bangladesh</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-lucide="phone" class="w-4 h-4 text-teal-400"></i>
-            <span>+880 1534403341</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-lucide="clock" class="w-4 h-4 text-teal-400"></i>
-            <span>Fast Response Time (Within 24 Hours)</span>
-          </div>
+        <!-- Preset Suggested Prompts -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <button class="prompt-chip" data-prompt="What is your experience with AI Agents and MCP?">
+            AI Agents & MCP experience
+          </button>
+          <button class="prompt-chip" data-prompt="Tell me about your healthcare data pipeline at IRIIC.">
+            Healthcare pipeline @ IRIIC
+          </button>
+          <button class="prompt-chip" data-prompt="What did you build for the YOLO crash detection project?">
+            YOLO car crash detection
+          </button>
+          <button class="prompt-chip" data-prompt="What are your core skills for an AI Engineer role?">
+            Core AI Engineering skills
+          </button>
+        </div>
+
+        <!-- Input Box -->
+        <div class="relative mb-4">
+          <input type="text" id="askInput" class="ask-input pr-12 text-sm" placeholder="Ask about LLMs, agent evaluation, data pipelines, publications...">
+          <button id="askSubmitBtn" class="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-teal-500 text-black hover:bg-teal-400 transition-colors" aria-label="Send question">
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <!-- Response Area -->
+        <div id="askResponse" class="p-4 rounded-xl bg-black/40 border border-white/10 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans min-h-[5rem] flex items-center">
+          <span class="text-slate-500 italic">Select a suggestion above or type your question to ask Fahim's agent.</span>
         </div>
       </div>
     </section>
+
+    <!-- 8. Steve Jobs Quote & Footer -->
+    <footer class="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-12 text-center">
+      <div class="max-w-md mx-auto mb-12">
+        <blockquote class="font-hand text-2xl sm:text-3xl text-slate-300 mb-2 leading-relaxed">
+          "Design is not just what it looks like and feels like. Design is how it works."
+        </blockquote>
+        <span class="text-xs font-mono text-slate-500 uppercase tracking-widest">— Steve Jobs</span>
+      </div>
+
+      <div class="hairline-divider mb-8"></div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-mono">
+        <p>© 2026 Fahim Faisal Deepto. Built for Technical Hiring Managers.</p>
+        <div class="flex items-center gap-5 text-slate-400">
+          <a href="https://github.com/ffdrko" target="_blank" class="hover:text-teal-400">GitHub (@ffdrko)</a>
+          <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" class="hover:text-teal-400">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" class="hover:text-teal-400">Google Scholar</a>
+          <a href="mailto:faisal.deepto@gmail.com" class="hover:text-teal-400">Email</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
+  <!-- Agent View Drawer (Signature poulo.site feature) -->
+  <div id="agentDrawerBackdrop" class="agent-drawer-backdrop">
+    <div class="agent-drawer">
+      <div class="flex items-center justify-between gap-3 border-b border-white/10 py-3.5 px-6 bg-slate-950">
+        <div>
+          <h3 class="font-display font-bold text-sm text-white flex items-center gap-2">
+            <i data-lucide="bot" class="w-4 h-4 text-teal-400"></i>
+            <span>Agent view</span>
+          </h3>
+          <p class="text-[11px] text-slate-400">This page as plain Markdown, the way an AI agent reads it.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="copyMarkdownBtn" class="btn-ghost text-xs py-1.5 px-3">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span>Copy Markdown</span>
+          </button>
+          <button id="closeAgentViewBtn" class="p-1.5 rounded-lg text-slate-400 hover:text-white" aria-label="Close agent view">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <pre id="agentMarkdownContent" class="agent-markdown-body"></pre>
+    </div>
+  </div>
+
   <!-- Technical Architecture Modal -->
-  <div id="projectModal" class="modal-overlay">
-    <div class="modal-content p-6 sm:p-8 relative">
-      <button id="modalCloseBtn" class="absolute top-5 right-5 p-2 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-400 hover:text-white transition-all" aria-label="Close dialog">
+  <div id="deepDiveModal" class="modal-overlay">
+    <div class="modal-box p-6 sm:p-8 relative">
+      <button id="modalCloseBtn" class="absolute top-5 right-5 p-2 rounded-lg text-slate-400 hover:text-white" aria-label="Close modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
-
-      <div id="modalBody">
-        <!-- Rendered dynamically by app.js -->
-      </div>
+      <div id="modalBody"></div>
     </div>
   </div>
 
   <!-- Toast Notification -->
-  <div id="toast">Email copied to clipboard!</div>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 Fahim Faisal Deepto. Built for Technical Hiring Managers.</p>
-      <div class="flex items-center gap-4 text-slate-400">
-        <a href="https://github.com/ffdrko" target="_blank" class="hover:text-teal-400">GitHub (@ffdrko)</a>
-        <span>•</span>
-        <a href="https://linkedin.com/in/fahim-faisal-deepto-b3452b186" target="_blank" class="hover:text-teal-400">LinkedIn</a>
-        <span>•</span>
-        <a href="https://scholar.google.com/citations?hl=en&user=tszCzBsAAAAJ" target="_blank" class="hover:text-teal-400">Google Scholar</a>
-      </div>
-    </div>
-  </footer>
+  <div id="toast">Copied to clipboard!</div>
 
   <!-- Scripts -->
   <script src="data.js"></script>
